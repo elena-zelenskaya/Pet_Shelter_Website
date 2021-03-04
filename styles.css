@@ -17,9 +17,9 @@ body {
 }
 
 header {
-    /* background:linear-gradient(270deg, #50514fff, #f25f5cff, #ffe006ff, #247ba0ff, #70c1b3ff); */
     background:linear-gradient(225deg, #7776BC, #1B1B3A);
-    /* background: linear-gradient(225deg, #0a090cff, #f0edeeff, #07393cff, #2c666eff, #90ddf0ff); */
+    /* background: linear-gradient(225deg, #565676, #539987); */
+    /* background: #565676; */
     box-shadow: 1px 1px 10px #1B1B3A;
 
 }
@@ -107,6 +107,7 @@ h2.headline {
 
 .pet_info:nth-child(odd) {
     background:linear-gradient(270deg, #7776BC, #1B1B3A);
+    /* background: linear-gradient(225deg, #565676, #539987); */
 }
 
 .pet_info:nth-child(odd) img {
@@ -115,6 +116,7 @@ h2.headline {
 
 .pet_info:nth-child(even) {
     background:linear-gradient(70deg, #7776BC, #1B1B3A);
+    /* background: linear-gradient(25deg, #565676, #539987); */
     text-align: right;
 }     
 
