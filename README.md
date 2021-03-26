@@ -2,8 +2,12 @@
 
 ![Image to recreate](petshelter.png)
 
-Responsive (Bootstrap, Flexbox, MediaQueries)
+### Responsive (Bootstrap, Flexbox, MediaQueries)
 
-different_color_scheme branch - used colors from the template
+*master branch*: Hard-coded data
 
-Data is fetching from the Petfinder API. At least 50 pets per page. Sorting by pet type works. Sorting by location doesn't work yet.
+*different_color_scheme branch*: Used colors from the template
+
+*API_added branch*: Data is fetching from the Petfinder API. At least 50 pets per page. Sorting by pet type works. Sorting by location doesn't work yet.
+
+
