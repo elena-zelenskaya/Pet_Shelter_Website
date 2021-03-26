@@ -1,131 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pet Shelter</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+			integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Pet Shelter </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-</head>
+	<body>
+		<header>
+			<div class="container mb-2">
+				<nav class="navbar navbar-expand-lg navbar-dark mb-4">
+					<img
+						class="navbar-logo"
+						src="img/heart_logo.png"
+						alt="heart logo"
+					/>
+					<div class="brand_wrapper">
+						<a class="navbar-brand" href="#">Pet Shelter</a>
+						<span class="headline">Find your new best friend</span>
+					</div>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
 
-<body>
-    <header>
-        <div class="container mb-2">
-            <nav class="navbar navbar-expand-lg navbar-dark mb-4">
-                <img class="navbar-logo" src="img/heart_logo.png" alt="heart logo">
-                <div class="brand_wrapper">
-                    <a class="navbar-brand" href="#">Pet Shelter</a>
-                    <span class="headline">Find your new best friend</span>
-                </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+					<div
+						class="collapse navbar-collapse justify-content-end"
+						id="navbarSupportedContent"
+					>
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#">Find a Pet</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Volunteer</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">About</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link btn" href="#" id="donate"
+									>Donate</a
+								>
+							</li>
+						</ul>
+					</div>
+				</nav>
 
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Find a Pet</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Volunteer</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn" href="#">Donate</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+				<div class="row">
+					<div class="offset-lg-4 col-lg-4 offset-md-2 col-md-5">
+						<form>
+							<div class="form-group">
+								<label for="selectPet"
+									>I am looking for a...</label
+								>
+								<i
+									class="fa fa-paw fa-2x fa-fw"
+									aria-hidden="true"
+								></i>
+								<select class="form-control" id="selectPet"> <!--This works-->
+									<option>Any Pet</option>
+									<option>Dog</option>
+									<option>Cat</option>
+									<option>Bird</option>
+									<option>Other</option>
+								</select>
+							</div>
+						</form>
+					</div>
+					<div class="col-lg-4 col-md-5">
+						<form>
+							<div class="form-group">
+								<label for="typeLocation">in or near...</label> <!--This doesn't work-->
+								<i
+									class="fa fa-map-marker fa-2x fa-fw"
+									aria-hidden="true"
+								></i>
+								<input
+									type="text"
+									class="form-control"
+									id="typeLocation"
+									placeholder="City or Zip Code"
+								/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</header>
 
-            <div class="row">
-                <div class="offset-lg-4 offset-xl-6 col-xl-3 col-lg-4 offset-md-2 col-md-5">
-                    <form>
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect1">I am looking for a...</label>
-                            <i class="fa fa-paw fa-2x" aria-hidden="true"></i>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>Any Pet</option>
-                                <option>Dog</option>
-                                <option>Cat</option>
-                                <option>Bird</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-5">
-                    <form>
-                        <div class="form-group">
-                            <label for="formGroupExampleInput">in or near...</label>
-                            <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
-                            <input type="text" class="form-control" id="formGroupExampleInput"
-                                placeholder="City or Zip Code">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main class="container">
-        <div class="row">
-            <div class="col-md-8 pet_info d-flex my-2">
-                <img src="img/pepper.jpg" alt="cat picture">
-                <div>
-                    <h2 class="headline">Pepper</h2>
-                    <p>Pepper is a slightly shy grey tabby, but she really loves showing her human affection.</p>
-                    <a href="#" class="info_link" href="pepper.html">Learn more &raquo;</a>
-                </div>
-            </div>
-            <div class="col-md-8 offset-md-4 pet_info d-flex flex-row-reverse my-2">
-                <img src="img/mikan.jpg" alt="dog picture">
-                <div>
-                    <h2 class="headline">Mikan</h2>
-                    <p>Mikan is a sweet, energetic Shiba Inu! She's 5 years old and looking for a new home.</p>
-                    <a href="#" class="info_link">Learn more &raquo;</a>
-                </div>
-            </div>
-            <div class="col-md-8 pet_info d-flex my-2">
-                <img src="img/beau.jpg" alt="dog picture">
-                <div>
-                    <h2 class="headline">Beau</h2>
-                    <p>Beau is a big, sweet, and loyal companion. He loves long walks and cold weather.</p>
-                    <a href="#" class="info_link">Learn more &raquo;</a>
-                </div>
-            </div>
-            <div class="col-md-8 offset-md-4 pet_info d-flex flex-row-reverse my-2">
-                <img src="img/tobias.jpg" alt="dog picture">
-                <div>
-                    <h2 class="headline">Tobias</h2>
-                    <p>Tobias is an adorable French bulldog. He needs a lot of attention and loves food more than
-                        anything else.</p>
-                    <a href="#" class="info_link">Learn more &raquo;</a>
-                </div>
-            </div>
-            <div class="col-md-8 pet_info d-flex my-2">
-                <img src="img/dodge.jpg" alt="dog picture" class="img-fluid">
-                <div>
-                    <h2 class="headline">Dodge</h2>
-                    <p>Dodge is a cheerful Boxer. He loves everything and everyone around.</p>
-                    <a href="#" class="info_link">Learn more &raquo;</a>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
-        crossorigin="anonymous"></script>
-</body>
+		<main class="container">
+			<div class="row"></div>
+		</main>
+		<div id="dialog" title="Alert"></div>  <!--I turned it off in scripts because it's annoying-->
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+			integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+			crossorigin="anonymous"
+		></script>
+		<!--The next two scripts are for a JS wrapper for the Petfinder API-->
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+		<script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
+		<script src="scripts.js"></script>
+	</body>
 </html>
